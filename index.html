@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+        <title>ReciWeb</title>
+    <script defer src="bundlef828f8813a2bbbcb5abb.js"></script></head>
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="header-logo">
+                    <h1>Reci<span class="text-success">Web</span></h1>
+                    <img id="logo" alt="" />
+                </div>
+            </div>
+        </header>
+        <section class="grid-layout">
+            <aside class="grid-layout-item">
+                <div class="menu-header">
+                    <h4>MENU</h4>
+                </div>
+                <div class="container-fluid">
+                    <div class="menu-items">
+                        <p id="dashboard"><a href="#">Dashboard</a></p>
+                        <p id="favorite-dishes"><a href="#">Favorite Dishes</a></p>
+                        <!-- ************Categories accordion************* -->
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button
+                                        id="categories"
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo"
+                                    >
+                                        Categories
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo"
+                                >
+                                    <div class="accordion-body">
+                                        <div class="accordion-body-item">
+                                            <img id="see-more-icon" alt="" />
+                                            <p id="see-more-btn">
+                                                <a href="#" class="">See more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="tutorial"><a href="#">Tutorial</a></p>
+                        <p id="setting"><a href="#">Setting</a></p>
+                        <p id="log-out">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modal">Log-out</a>
+                        </p>
+                    </div>
+                </div>
+            </aside>
+            <main class="grid-layout-item">
+                <section id="search-bar" class="input-group">
+                    <input
+                        type="search"
+                        class="form-control"
+                        id="recipe-search"
+                        placeholder="Search recipe..."
+                    />
+                    <button class="input btn btn-success" id="search-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </section>
+                <section id="recipe-area"></section>
+            </main>
+        </section>
+        <!-- ///////////////////// Modals \\\\\\\\\\\\\\ -->
+        <div class="modal" tabindex="-1" id="modal">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Recipe Details</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <!-- ///////////////////// Modal Body \\\\\\\\\\\\\\ -->
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            id="close-modal"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
